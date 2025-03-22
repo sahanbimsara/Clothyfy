@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class CustomerController implements CustomerService{
 
@@ -24,7 +25,20 @@ public class CustomerController implements CustomerService{
 
     @Override
     public Customer searchCustomer(String id) {
-        return null;
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM customers WHERE customer_id=" + id);
+            resultSet.next();
+            return new Customer(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getDouble(4)
+            );
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
