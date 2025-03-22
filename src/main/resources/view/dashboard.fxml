@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" stroke="BLACK" strokeType="INSIDE" width="232.0" />
+      <JFXButton layoutX="13.0" layoutY="37.0" onAction="#btnCustomerForm" prefHeight="51.0" prefWidth="206.0" style="-fx-background-color: #f7f9f9;" text="Customer Form">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="13.0" layoutY="105.0" onAction="#btnItemForm" prefHeight="51.0" prefWidth="206.0" style="-fx-background-color: #f7f9f9;" text="Item Form">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="13.0" layoutY="174.0" onAction="#btnOrderForm" prefHeight="51.0" prefWidth="206.0" style="-fx-background-color: #f7f9f9;" text="Order Form">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="loadFormContent" layoutX="233.0" prefHeight="400.0" prefWidth="576.0" />
+      <JFXButton layoutX="13.0" layoutY="255.0" onAction="#btnOrderForm" prefHeight="51.0" prefWidth="206.0" style="-fx-background-color: #f7f9f9;" text="Register new">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
